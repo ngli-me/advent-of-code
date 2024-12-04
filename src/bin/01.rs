@@ -6,7 +6,7 @@ use std::collections::HashMap;
 use std::fs::File;
 use std::io::{BufRead, BufReader};
 
-const DAY: &str = "01"; // TODO: Fill the day
+const DAY: &str = "01";
 const INPUT_FILE: &str = concatcp!("input/", DAY, ".txt");
 
 const TEST: &str = "\
@@ -51,7 +51,6 @@ fn main() -> Result<()> {
         Ok(ans)
     }
 
-    // TODO: Set the expected answer for the test input
     assert_eq!(TEST_ANS, part1(BufReader::new(TEST.as_bytes()))?);
 
     let input_file = BufReader::new(File::open(INPUT_FILE)?);

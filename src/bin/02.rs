@@ -6,7 +6,7 @@ use is_sorted::IsSorted;
 use std::fs::File;
 use std::io::{BufRead, BufReader};
 
-const DAY: &str = "02"; // TODO: Fill the day
+const DAY: &str = "02";
 const INPUT_FILE: &str = concatcp!("input/", DAY, ".txt");
 
 const TEST: &str = "\
@@ -16,7 +16,7 @@ const TEST: &str = "\
 1 3 2 4 5
 8 6 4 4 1
 1 3 6 7 9
-"; // TODO: Add the test input
+";
 
 fn main() -> Result<()> {
     start_day(DAY);
@@ -25,7 +25,6 @@ fn main() -> Result<()> {
     println!("=== Part 1 ===");
 
     fn part1<R: BufRead>(reader: R) -> Result<usize> {
-        // TODO: Solve Part 1 of the puzzle
         let mut ans: usize = 0;
 
         fn check_levels(v: &Vec<usize>) -> bool {
@@ -62,7 +61,6 @@ fn main() -> Result<()> {
         Ok(ans)
     }
 
-    // TODO: Set the expected answer for the test input
     assert_eq!(2, part1(BufReader::new(TEST.as_bytes()))?);
 
     let input_file = BufReader::new(File::open(INPUT_FILE)?);
